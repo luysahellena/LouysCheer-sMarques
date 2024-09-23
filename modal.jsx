@@ -1,6 +1,9 @@
+// index.js
 import React from 'react';
+import ReactDOM from 'react-dom';
 
-const ChatHeader = () => {
+// Define the JSX code
+const ChatHeader = ({ userName }) => {
   return (
     <div>
       <h2>Louys Beer's & Cheers Chat</h2>
@@ -9,15 +12,10 @@ const ChatHeader = () => {
   );
 };
 
-export default ChatHeader;
-
-import React, { useState } from 'react';
-
 const ChatInput = () => {
-  const [message, setMessage] = useState('');
+  const [message, setMessage] = React.useState('');
 
   const handleSendMessage = () => {
-    // TO DO: Implement sending message logic
     console.log(`Sending message: ${message}`);
     setMessage('');
   };
@@ -35,10 +33,6 @@ const ChatInput = () => {
   );
 };
 
-export default ChatInput;
-
-import React from 'react';
-
 const ChatMessage = ({ message }) => {
   return (
     <div>
@@ -46,11 +40,6 @@ const ChatMessage = ({ message }) => {
     </div>
   );
 };
-
-export default ChatMessage;
-
-import React from 'react';
-import ChatMessage from './ChatMessage';
 
 const ChatMessageList = ({ messages }) => {
   return (
@@ -62,18 +51,9 @@ const ChatMessageList = ({ messages }) => {
   );
 };
 
-export default ChatMessageList;
-
-import React from 'react';
-import ChatHeader from './ChatHeader';
-import ChatInput from './ChatInput';
-import ChatMessageList from './ChatMessageList';
-
 const App = () => {
-  const [messages, setMessages] = useState([]);
-  const [userName, setUserName] = useState('');
-
-  // TO DO: Implement user authentication and message sending logic
+  const [messages, setMessages] = React.useState([]);
+  const [userName, setUserName] = React.useState('');
 
   return (
     <div>
@@ -84,4 +64,6 @@ const App = () => {
   );
 };
 
-export default App;
+// Render the App component to the DOM
+const rootElement = document.getElementById('root');
+ReactDOM.render(<App />, rootElement);
