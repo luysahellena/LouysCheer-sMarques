@@ -89,3 +89,22 @@ nav a {
 nav a:hover {
     color: #ccc;
 }
+
+.card-widget {
+    background-color: #333;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  
+  .card-widget:hover {
+    background-color: #444;
+  }
+
+  .item-list-container {
+    background-color: #f7f7f7;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
