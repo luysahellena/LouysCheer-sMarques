@@ -82,29 +82,50 @@ nav li {
 }
 
 nav a {
-    color: #fff;
+    color: #daae5d;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: #ccc;
+    color: #896b35;
 }
-
-.card-widget {
-    background-color: #333;
-    padding: 10px;
-    border-radius: 50%;
-    cursor: pointer;
+#navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
   }
   
-  .card-widget:hover {
-    background-color: #444;
+  #navbar ul li {
+    display: inline-block;
+    position: relative;
   }
-
-  .item-list-container {
+  
+  #navbar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+  }
+  
+  #navbar ul li ul.submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
     background-color: #f7f7f7;
-    padding: 20px;
+    padding: 10px;
     border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  #navbar ul li:hover ul.submenu {
+    display: block;
+  }
+  
+  #navbar ul li ul.submenu li {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
+  #navbar ul li ul.submenu li a {
+    color: #333;
+    text-decoration: none;
   }

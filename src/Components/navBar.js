@@ -1,17 +1,21 @@
 import React from 'react';
-import CardWidget from './CardWidget';
 
 const NavBar = () => {
   return (
-    <nav id="navbar">
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Products</a></li>
-        <li><a href="#">Contact</a></li>
-        <li><CardWidget /></li>
-      </ul>
-    </nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Products</a>
+        <ul className="submenu">
+          <li className="item-list-container">1</li>
+          <li className="item-list-container">2</li>
+          <li className="item-list-container">3</li>
+          <li className="item-list-container">4</li>
+          <li className="item-list-container">5</li>
+          <li className="item-list-container">6</li>
+        </ul>
+      </li>
+    </ul>
   );
 };
 
